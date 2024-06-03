@@ -1,0 +1,1 @@
+class NoBotException extends Exception {}
