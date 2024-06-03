@@ -28,7 +28,19 @@ class BotManager {
             }
         } catch (NoBotException e) {
         }
-        //TODO add BACKGROUND to give us a manager we can grab
+        Background.instance().create(this);
+    }
+
+    public ArrayList getBots() {
+        return this.bots;
+    }
+
+    public void removeBot(Bot b) {
+        this.bots.remove(b);
+    }
+
+    public void addBot(Bot b) {
+        this.bots.add(b);
     }
 }
 

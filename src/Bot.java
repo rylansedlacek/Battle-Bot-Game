@@ -29,6 +29,35 @@ class Bot {
 
         s.nextLine(); //read past --- delim 
     }
+
+    public String getName() {
+        return this.name;
+    }
+
+    public int getHealth() {
+        return this.health;
+    }
+
+    public void setHealth(int h) {
+        int test = this.health + h;
+        if (test > 100) {
+            this.health = 100;
+            return;
+        } else if (test <= 0) {
+            //TODO destroyBot() method needed
+            System.out.println("adding destroy soon!");
+            return;
+        }
+        this.health = test;
+    }
+
+    public ArrayList getSkills() {
+        return this.abilities;
+    }
+
+
+
+        
   }
 
 
