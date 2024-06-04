@@ -26,17 +26,36 @@ class Interface {
         BotManager theManager = Background.instance().getManager();
         ArrayList<Bot> bots = theManager.getBots();
 
-        //TODO add user interface
-            // 1) select bot
-            // 2) game selects random bot
-            // 3) battle set up
-            
+        boolean selected = false;
+        Scanner stdin = new Scanner(System.in);
+        Command theCommand = null;
 
-       for (int i=0; i<bots.size(); i++) {
-          System.out.println(bots.get(i).getName());
-          System.out.println(bots.get(i).getHealth());
-       } 
+        while (!selected) {
+            System.out.println();
+            System.out.println("1 - List Bots");
+            System.out.println("2 - Select Bot");
+            System.out.println("3 - exit");
+            System.out.print("> ");
+            String choice = stdin.nextLine();
 
+            if (choice.equals("1")) { //TODO
+                System.out.println();
+               // theCommand = CommandFactory.getCommand("LIST");
+               // System.out.println(theCommand.execute());
+            } else if (choice.equals("2")) { //TODO
+                System.out.println();
+               // theCommand = CommandFactory.getCommand("SELECT");
+               // System.out.println(theCommand.execute());
+                selected = true;
+            } else if (choice.equals("3")) {
+                System.exit(1);
+            } else {
+                System.out.println("Invalid Input Try Again.");
+            }
+
+             
+
+        }
 
     }
 }

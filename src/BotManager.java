@@ -39,8 +39,5 @@ class BotManager {
         this.bots.remove(b);
     }
 
-    public void addBot(Bot b) {
-        this.bots.add(b);
-    }
 }
 
