@@ -38,10 +38,10 @@ class Interface {
             System.out.print("> ");
             String choice = stdin.nextLine();
 
-            if (choice.equals("1")) { //TODO
+            if (choice.equals("1")) { 
                 System.out.println();
-               // theCommand = CommandFactory.getCommand("LIST");
-               // System.out.println(theCommand.execute());
+                theCommand = CommandFactory.instance().getCommand("LIST");
+                System.out.println(theCommand.execute());
             } else if (choice.equals("2")) { //TODO
                 System.out.println();
                // theCommand = CommandFactory.getCommand("SELECT");

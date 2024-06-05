@@ -14,8 +14,19 @@ class CommandFactory {
     }
 
     Command getCommand(String ID) {
-       Command n = null;
-       return n;
+      Command theCommand = null;
+      
+     if (ID.equals("LIST")) {
+        theCommand = new ListCommand();
+     } else {
+        theCommand = new FalseCommand();
+     } 
+     
+        if (theCommand == null) {
+          theCommand = new FalseCommand();
+        }
+
+      return theCommand; //keep at bottom  
 
     }
 
