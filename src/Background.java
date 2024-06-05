@@ -26,6 +26,14 @@ class Background {
         return this.theManager;
     }
 
+    public void setBot(Bot b) {
+        this.currentBot = b;
+    }
+
+    public Bot getCurrentBot() {
+        return this.currentBot;
+    }
+
    
 
 

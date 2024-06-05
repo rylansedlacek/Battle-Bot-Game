@@ -39,5 +39,16 @@ class BotManager {
         this.bots.remove(b);
     }
 
+    public Bot getBotNamed(String name) {
+        Bot retBot = null;
+
+        for (int i=0; i<bots.size(); ++i) {
+            if (bots.get(i).getName().equals(name)) {
+                retBot = bots.get(i);
+            }
+        }
+        return retBot;
+    }
+
 }
 
