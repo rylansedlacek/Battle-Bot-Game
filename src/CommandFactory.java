@@ -18,6 +18,9 @@ class CommandFactory {
       
      if (ID.equals("LIST")) {
         theCommand = new ListCommand();
+     } else if (ID.startsWith("SELECT")) {
+         String name = ID.substring("SELECT".length());   
+         theCommand = new SelectCommand(name);
      } else {
         theCommand = new FalseCommand();
      } 

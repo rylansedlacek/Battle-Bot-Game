@@ -44,9 +44,17 @@ class Interface {
                 System.out.println(theCommand.execute());
             } else if (choice.equals("2")) { //TODO
                 System.out.println();
-               // theCommand = CommandFactory.getCommand("SELECT");
-               // System.out.println(theCommand.execute());
-                selected = true;
+                System.out.println("ENTER NAME:");
+                System.out.print("> ");
+                String name = stdin.nextLine();
+
+                theCommand = CommandFactory.instance().getCommand("SELECT" + name);
+                System.out.println(theCommand.execute());
+
+                Bot check = Background.instance().getCurrentBot();
+                    if (check != null) {
+                        selected = true;
+                    }
             } else if (choice.equals("3")) {
                 System.exit(1);
             } else {
