@@ -54,6 +54,7 @@ class Interface {
                 Bot check = Background.instance().getCurrentBot();
                     if (check != null) {
                         selected = true;
+                        Robo.instance().initRobo();
                     }
             } else if (choice.equals("3")) {
                 System.exit(1);
