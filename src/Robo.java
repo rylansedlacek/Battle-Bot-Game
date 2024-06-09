@@ -27,6 +27,8 @@ class Robo {
 
     public void initRobo() {
 
+        Background.instance().setRobo(this);
+
         if (!this.initDone) {
         this.names.add("Jeff"); //TODO add more!
         this.names.add("Steve");

@@ -61,10 +61,34 @@ class Interface {
             } else {
                 System.out.println("Invalid Input Try Again.");
             }
+        } // end initial menu
+        
 
-             
-
+       if (selected) { 
+            Bot currentBot = Background.instance().getCurrentBot();
+            System.out.println("Current Bot: " + currentBot.getName());
+            System.out.println("Enemy Bot: " + Background.instance().getRobo().getName());
+            System.out.println("-----------------------"); 
         }
+        
+      boolean exitCheck = false;
+       while (!exitCheck) {
+        System.out.println();
+        System.out.println("1 - BATTLE!");
+        System.out.println("2 - exit");
+        System.out.print("> ");
+        String choice = stdin.nextLine();
 
-    }
-}
+        if (choice.equals("1")) {
+            theCommand = CommandFactory.instance().getCommand("BATTLE");
+            System.out.println(theCommand.execute());
+            exitCheck = true;
+        } else if (choice.equals("2")) {
+            exitCheck = true;
+        } else {
+            System.out.println("Invalid Input Try Again.");
+        }
+     }
+
+    } // end main
+} //end class

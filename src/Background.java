@@ -4,11 +4,13 @@ class Background {
     private static Background theInstance;
     private BotManager theManager;
     private Bot currentBot;
+    private Robo robo;
 
     public Background() {
         this.theInstance = theInstance;
         this.theManager = theManager;
         this.currentBot = null;
+        this.robo = null;
     }
 
     public static synchronized Background instance() {
@@ -32,6 +34,14 @@ class Background {
 
     public Bot getCurrentBot() {
         return this.currentBot;
+    }
+
+    public void setRobo(Robo r) {
+        this.robo = r;
+    }
+
+    public Robo getRobo() {
+        return this.robo;
     }
 
    

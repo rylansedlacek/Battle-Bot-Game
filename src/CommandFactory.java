@@ -21,6 +21,8 @@ class CommandFactory {
      } else if (ID.startsWith("SELECT")) {
          String name = ID.substring("SELECT".length());   
          theCommand = new SelectCommand(name);
+     } else if (ID.equals("BATTLE")) {
+         theCommand = new BattleCommand();
      } else {
         theCommand = new FalseCommand();
      } 
